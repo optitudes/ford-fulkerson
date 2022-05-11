@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="516.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.PrincipalViewController">
+   <children>
+      <VBox prefHeight="469.0" prefWidth="541.0">
+         <children>
+            <HBox prefHeight="197.0" prefWidth="541.0">
+               <children>
+                  <ScrollPane prefHeight="197.0" prefWidth="293.0">
+                     <content>
+                        <VBox fx:id="vBoxVertices" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="277.0" />
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane prefHeight="197.0" prefWidth="245.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="22.0" text="Cantidad nodos(Máximo 5) :" />
+                        <TextField fx:id="txxtCantNodos" layoutX="165.0" layoutY="18.0" prefHeight="25.0" prefWidth="66.0" promptText="5">
+                           <cursor>
+                              <Cursor fx:constant="TEXT" />
+                           </cursor></TextField>
+                        <Button fx:id="btnGenerarNodos" layoutX="69.0" layoutY="74.0" mnemonicParsing="false" onAction="#generarNodosAction" text="Generar nodos" />
+                        <Button fx:id="btnGenerarGrafo" layoutX="69.0" layoutY="150.0" mnemonicParsing="false" onAction="#generarGrafoAction" text="Generar grafo" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="265.0" prefWidth="461.0">
+               <children>
+                  <Separator fx:id="separatorBE" layoutX="158.0" layoutY="93.0" prefHeight="3.0" prefWidth="186.0" />
+                  <Separator fx:id="separatorAD" layoutX="213.0" layoutY="121.0" prefHeight="3.0" prefWidth="150.0" rotate="62.5" />
+                  <Separator fx:id="separatorBD" layoutX="142.0" layoutY="153.0" prefHeight="3.0" prefWidth="181.0" rotate="33.7" />
+                  <Separator fx:id="separatorCE" layoutX="173.0" layoutY="152.0" prefHeight="3.0" prefWidth="198.0" rotate="-31.0" />
+                  <Separator fx:id="separatorBC" layoutX="113.0" layoutY="152.0" prefHeight="3.0" prefWidth="82.0" rotate="71.6" />
+                  <Separator fx:id="separatorCD" layoutX="196.0" layoutY="214.0" prefHeight="1.0" prefWidth="111.0" />
+                  <Separator fx:id="separatorDE" layoutX="311.0" layoutY="152.0" prefHeight="3.0" prefWidth="82.0" rotate="107.7" />
+                  <Separator fx:id="separatorAE" layoutX="269.0" layoutY="55.0" prefHeight="3.0" prefWidth="82.0" rotate="-154.6" />
+                  <TextField fx:id="txtNodoA" editable="false" layoutX="229.0" layoutY="14.0" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 20;" />
+                  <TextField fx:id="txtNodoE" layoutX="352.0" layoutY="72.0" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 20;" />
+                  <TextField fx:id="txtNodoC" layoutX="154.0" layoutY="194.0" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 20;" />
+                  <TextField fx:id="txtNodoB" layoutX="112.0" layoutY="72.0" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 20;" />
+                  <TextField fx:id="txtNodoD" layoutX="310.0" layoutY="194.0" prefHeight="42.0" prefWidth="42.0" style="-fx-background-radius: 20;" />
+                  <Separator fx:id="separatorAB" layoutX="151.0" layoutY="61.0" prefHeight="3.0" prefWidth="82.0" rotate="154.8" />
+                  <ImageView fx:id="imgBA" fitHeight="17.0" fitWidth="18.0" layoutX="215.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" rotate="-25.2">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgAB" fitHeight="17.0" fitWidth="18.0" layoutX="150.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" rotate="151.9">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgEA" fitHeight="17.0" fitWidth="18.0" layoutX="269.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" rotate="-154.6">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgAE" fitHeight="17.0" fitWidth="18.0" layoutX="340.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" rotate="25.9">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgDE" fitHeight="17.0" fitWidth="18.0" layoutX="353.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" rotate="-76.0">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgED" fitHeight="17.0" fitWidth="18.0" layoutX="332.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" rotate="107.4">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgDC" fitHeight="17.0" fitWidth="18.0" layoutX="196.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" rotate="178.0">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgCD" fitHeight="17.0" fitWidth="18.0" layoutX="294.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgCB" fitHeight="17.0" fitWidth="18.0" layoutX="134.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" rotate="-112.9">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgBC" fitHeight="17.0" fitWidth="18.0" layoutX="156.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" rotate="66.8">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgEC" fitHeight="17.0" fitWidth="18.0" layoutX="188.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" rotate="140.5">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgCE" fitHeight="17.0" fitWidth="18.0" layoutX="338.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" rotate="-32.5">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <Separator fx:id="separatorAC" layoutX="139.0" layoutY="121.0" prefHeight="3.0" prefWidth="150.0" rotate="-66.8" />
+                  <ImageView fx:id="imgCA" fitHeight="17.0" fitWidth="18.0" layoutX="230.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" rotate="-68.2">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgAC" fitHeight="17.0" fitWidth="18.0" layoutX="177.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" rotate="109.1">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgBD" fitHeight="17.0" fitWidth="18.0" layoutX="293.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true" rotate="32.7">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgDB" fitHeight="17.0" fitWidth="18.0" layoutX="149.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true" rotate="-143.4">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgDA" fitHeight="17.0" fitWidth="18.0" layoutX="249.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" rotate="-119.5">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgAD" fitHeight="17.0" fitWidth="18.0" layoutX="313.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" rotate="57.7">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgEB" fitHeight="17.0" fitWidth="18.0" layoutX="155.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgBE" fitHeight="17.0" fitWidth="18.0" layoutX="335.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/ArDer.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txtAB" layoutX="164.0" layoutY="36.0" prefHeight="25.0" prefWidth="35.0" rotate="-18.4">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtAE" layoutX="305.0" layoutY="32.0" prefHeight="25.0" prefWidth="35.0" rotate="26.6">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtDE" layoutX="356.0" layoutY="150.0" prefHeight="25.0" prefWidth="35.0">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCD" layoutX="239.0" layoutY="221.0" prefHeight="25.0" prefWidth="35.0">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtBC" layoutX="116.0" layoutY="150.0" prefHeight="25.0" prefWidth="35.0">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCE" layoutX="246.0" layoutY="126.0" prefHeight="25.0" prefWidth="35.0" rotate="-32.5">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtBE" layoutX="234.0" layoutY="95.0" prefHeight="25.0" prefWidth="35.0">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtBD" layoutX="218.0" layoutY="124.0" prefHeight="25.0" prefWidth="35.0" rotate="36.9">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtAD" layoutX="290.0" layoutY="98.0" prefHeight="25.0" prefWidth="35.0">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtAC" layoutX="180.0" layoutY="95.0" prefHeight="25.0" prefWidth="35.0" rotate="-178.8">
+                     <font>
+                        <Font size="8.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
